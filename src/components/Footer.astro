@@ -10,34 +10,84 @@ import google from "../assets/google.png";
     class="flex flex-col md:flex-row w-full justify-between max-w-7xl mx-auto items-start text-white"
   >
     <div class="flex flex-col md:flex-row w-full justify-evenly">
-      <Image src={logo} alt="logo" class="h-20 w-auto mt-8 self-center" />
+      <a href="/">
+        <Image src={logo} alt="logo" class="h-20 w-auto mt-8 self-center" />
+      </a>
       <div
         class="flex flex-col sm:flex-row justify-center sm:justify-evenly text-center sm:text-start"
       >
         <div class="px-8 pt-6 pb-8 mb-4">
           <p class="font-bold uppercase mb-4">Quick Nav</p>
-          <ul class="text-white space-y-2">
-            <li><a href="link-to-home-page">Home</a></li>
-            <li><a href="link-to-team-building-page">Team Building</a></li>
+          <ul class="text-white space-y-2 text-lg">
             <li>
-              <a href="link-to-buds-preparation-page">BUD/S Preparation</a>
-            </li>
-            <li><a href="link-to-testimonial-page">Testimonial</a></li>
-            <li><a href="link-to-contact-page">Contact</a></li>
-            <li>
-              <a href="link-to-schedule-training-page">Schedule Training</a>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                href="/">Home</a
+              >
             </li>
             <li>
-              <a href="link-to-waiver-release-form">Waiver/Release Form</a>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                href="team-building">Team Building</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                href="/buds-s-preparation">BUD/S Preparation</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                href="/testimonials">Testimonial</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                href="/contact">Contact</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                href="training">Schedule Training</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                href="">Waiver/Release Form</a
+              >
             </li>
           </ul>
         </div>
         <div class="px-8 pt-6 pb-8 mb-4">
           <p class="font-bold uppercase mb-4">Follow Us</p>
-          <ul class="text-white space-y-2">
-            <li><a href="link-to-home-page">Google</a></li>
-            <li><a href="link-to-team-building-page">Facebook</a></li>
-            <li><a href="link-to-buds-preparation-page">LinkedIn</a></li>
+          <ul class="text-white space-y-2 text-lg">
+            <li>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                target="_blank"
+                href="https://www.google.com/search?q=Getka+SEAL+Mindset&stick=H4sIAAAAAAAA_-NgU1I1qEi0SEozSbIwSTFKTEo0SDa2MqhIAdIW5mbJaYapaalplkaLWIXcU0uyExWCXR19FHwz81KKU0sAsnzckT4AAAA&hl=en&mat=CRx8dwAjBs5jElcBpsFAC7hJtem75hOah1iGVi3fWOZcrOM0v4YeEa6bqK4WHE1L5C9Q0TxA6RX3-Iu5Rli0ef8eZ6kVoa3hXN2X7edaYtQfJP4dTC17zOYxjlvkslPdp3Y&authuser=0"
+                >Google</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                target="_blank"
+                href="https://www.facebook.com/michael.getka">Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                target="_blank"
+                href="https://www.linkedin.com/in/getkasm/">LinkedIn</a
+              >
+            </li>
           </ul>
         </div>
         <div class="px-8 pt-6 pb-8 mb-4">
@@ -54,17 +104,23 @@ import google from "../assets/google.png";
                   d="M128 16a88.1 88.1 0 0 0-88 88c0 75.3 80 132.17 83.41 134.55a8 8 0 0 0 9.18 0C136 236.17 216 179.3 216 104a88.1 88.1 0 0 0-88-88Zm0 56a32 32 0 1 1-32 32a32 32 0 0 1 32-32Z"
                 ></path></svg
               >
-              <a href="link-to-home-page">
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300 text-lg"
+              >
                 <p>Ponte Vedra Beach Florida 32082</p></a
               >
             </li>
             <li>
-              <a href="link-to-team-building-page"
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                href="link-to-team-building-page"
                 ><Image src={veteran} alt="logo" class="h-16 w-auto mt-8" /></a
               >
             </li>
             <li>
-              <a href="link-to-buds-preparation-page"
+              <a
+                class="hover:text-yellow-600 transition ease-in-out duration-300"
+                href="link-to-buds-preparation-page"
                 ><Image src={google} alt="logo" class="h-16 w-auto mt-8" /></a
               >
             </li>
@@ -72,7 +128,7 @@ import google from "../assets/google.png";
         </div>
       </div>
     </div>
-    <form class="hidden lg:block shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <form class="hidden lg:block shadow-md rounded px-4 pt-6 pb-8 mb-4">
       <p class="font-bold uppercase mb-4">Reach Out</p>
       <div class="mb-4">
         <label class="block text-gray-200 text-sm font-bold mb-2" for="name"

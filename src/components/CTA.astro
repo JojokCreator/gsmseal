@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero.jpg";
 ---
 
 <section
@@ -9,13 +9,15 @@ import hero from "../assets/hero.png";
   <Image
     alt="thumbs up"
     src={hero}
-    class="h-full w-3/4 mx-auto sm:w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end rounded-2xl"
+    class="h-full w-3/4 mx-auto sm:w-full object-cover sm:h-[calc(100%_-_3rem)] sm:self-end rounded-2xl"
   />
   <div class="p-8 md:p-12 lg:px-16 lg:py-24">
     <div
       class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right"
     >
-      <h2 class="text-2xl font-bold text-yellow-600 md:text-3xl font-blackops">
+      <h2
+        class="text-2xl font-bold text-yellow-600 tracking-widest md:text-3xl font-blackops"
+      >
         WELCOME TO GETKA SEAL MINDSET
       </h2>
       <p class="hidden md:mt-4 md:block font-bold text-black text-xl">

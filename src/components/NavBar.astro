@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 import { Image } from "astro:assets";
 ---
 
-<header class="flex gap-5 bg-yellow-600 pb-1">
+<header class="flex gap-5 bg-yellow-600 pb-1 w-screen">
   <div class="rip absolute bg-black w-screen p-2">
     <div
       class="text-white flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto"
@@ -60,7 +60,9 @@ import { Image } from "astro:assets";
     <div
       class="flex flex-col lg:flex-row w-full justify-between mt-10 max-w-7xl mx-auto items-center relative"
     >
-      <Image src={logo} alt="logo" class="h-20 w-auto mt-8" />
+      <a href="/">
+        <Image src={logo} alt="logo" class="w-96 mt-4" />
+      </a>
       <div class="lg:hidden flex flex-col justify-center">
         <div class="uppercase text-lg font-semibold text-center">
           Schedule Training
@@ -68,42 +70,42 @@ import { Image } from "astro:assets";
         <MenuIcon class="w-8 h-8 text-black z-50 mx-auto" />
       </div>
       <MenuItems
-        class="hidden lg:flex bg-white lg:bg-transparent w-screen p-6 lg:static absolute -bottom-48 left-0"
+        class="hidden lg:flex bg-white lg:bg-transparent w-screen p-6 lg:static absolute -bottom-48 left-0 z-50"
       >
         <ul
           class="flex flex-col lg:flex-row mx-auto lg:gap-5 uppercase text-lg font-semibold text-center"
         >
           <li>
             <a
-              href="#"
+              href="/"
               class="hover:text-white transition duration-300 ease-in-out"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="#"
+              href="/team-building"
               class="hover:text-white transition duration-300 ease-in-out"
               >Team Building</a
             >
           </li>
           <li>
             <a
-              href="#"
+              href="/buds-s-preparation"
               class="hover:text-white transition duration-300 ease-in-out"
               >Bud/s Preperation</a
             >
           </li>
           <li>
             <a
-              href="#"
+              href="/testimonials"
               class="hover:text-white transition duration-300 ease-in-out"
               >Testimonials</a
             >
           </li>
           <li class="hidden lg:block">
             <a
-              href="#"
+              href="/training"
               class="hover:text-white transition duration-300 ease-in-out"
               >Schedule Training</a
             >
@@ -116,13 +118,13 @@ import { Image } from "astro:assets";
       >
         <li>
           <a
-            href="#"
+            href="/contact"
             class="hover:text-white transition duration-300 ease-in-out"
             >Contact</a
           >
         </li>
         <li>
-          <a href="#" class="hover:text-white">
+          <a href='/account"' class="hover:text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40"

@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets";
+import colosseum from "../../assets/colosseum.jpg";
+import americanflag from "../../assets/americanflag.jpg";
+import teambuilding from "../../assets/teambuilding.jpg";
+---
+
+<section
+  class="overflow- sm:grid sm:grid-cols-2 sm:items-center max-w-6xl mx-auto my-10"
+>
+  <Image
+    alt="picture of colosseum"
+    src={colosseum}
+    class="h-full w-3/4 mx-auto sm:w-full object-cover sm:h-[calc(100%_-_3rem)] sm:self-end rounded-2xl"
+  />
+  <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+    <div
+      class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right"
+    >
+      <h2
+        class="text-2xl font-bold text-yellow-600 tracking-widest md:text-3xl font-blackops"
+      >
+        THE MAN IN THE ARENA
+      </h2>
+      <p class="text-black text-xl md:mt-4">
+        “It is not the critic who counts; not the man who points out how the
+        strong man stumbles, or where the doer of deeds could have done them
+        better. The credit belongs to the man who is actually in the arena,
+        whose face is marred by dust and sweat and blood; who strives valiantly;
+        who errs, who comes short again and again, because there is no effort
+        without error and shortcoming; but who does actually strive to do the
+        deeds; who knows great enthusiasms, the great devotions; who spends
+        himself in a worthy cause; who at the best knows in the end the triumph
+        of high achievement, and who at the worst, if he fails, at least fails
+        while daring greatly, so that his place shall never be with those cold
+        and timid souls who neither know victory nor defeat.”
+      </p>
+      <p class="md:mt-4 font-bold text-black text-xl">- Theodore Roosevelt</p>
+    </div>
+  </div>
+</section>
+<section
+  class="overflow- sm:grid sm:grid-cols-2 gap-2 sm:items-center max-w-6xl mx-auto my-10"
+>
+  <div class="relative flex justify-center items-center">
+    <Image
+      alt="american flag"
+      src={americanflag}
+      class="h-full full mx-auto sm:w-5/6 object-cover brightness-75 sm:h-[calc(100%_-_3rem)] sm:self-end rounded-2xl"
+    />
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+    >
+      <p
+        class="text-white uppercase text-2xl md:text-3xl lg:text-5xl font-black mb-4"
+      >
+        GETKA SEAL MINDSET TRAINING
+      </p>
+      <a
+        href="#"
+        class="inline-block whitespace-nowrap rounded bg-yellow-600 px-12 py-3 font-bold text-black uppercase text-lg transition hover:bg-yellow-700 focus:outline-none focus:ring focus:ring-yellow-800"
+      >
+        Schedule Training
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-col h-full">
+    <h2
+      class="text-2xl font-bold text-yellow-600 tracking-widest md:text-3xl font-blackops text-center"
+    >
+      TEAM BUILDING
+    </h2>
+    <Image
+      alt="team building"
+      src={teambuilding}
+      class="h-full w-3/4 mx-auto sm:w-full object-cover sm:h-[calc(100%_-_3rem)] sm:self-end rounded-2xl"
+    />
+  </div>
+</section>

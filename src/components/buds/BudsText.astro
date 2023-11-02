@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import statue from "../../assets/statue.jpg";
+---
+
+<section class="sm:grid sm:grid-cols-2 sm:items-start max-w-6xl mx-auto">
+  <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+    <div class="mx-auto max-w-xl text-left ltr:sm:text-left rtl:sm:text-right">
+      <h2
+        class="text-2xl font-bold text-yellow-600 tracking-widest md:text-3xl font-blackops text-center"
+      >
+        BASIC UNDERWATER DEMOLITION/SEAL (BUD/S) PREPARATION
+      </h2>
+      <p class="md:mt-4 font-bold text-black text-xl text-center">
+        "One Evolution at a Time"
+      </p>
+      <p class="text-black text-xl md:mt-4">
+        Are you seeking a Navy SEAL contract? Do you need help obtaining
+        competitive Physical Screening Test (PST) scores? Do you have questions
+        about the steps required to get a SEAL contract from your respective
+        Navy Recruiting District? Do you need to learn the correct form for the
+        Combat-Side Stroke? At Getka SEAL Mindset, we will make that happen.
+        Contact us to get the ball rolling.
+      </p>
+      <p class="text-black text-xl md:my-4">What you can expect:</p>
+      <ul class="text-left text-xl space-y-2 list-disc list-outside">
+        <li>
+          Familiarization with the points of performance for the Physical
+          Screening Test (PST).
+        </li>
+        <li>Mock PST to get your baseline numbers.</li>
+        <li>Training to achieve competitive PST scores.</li>
+        <li>Teaching and/or modifying your Combat-side stroke.</li>
+        <li>Drownproofing proficiency (not tied up).</li>
+        <li>Knot tying skills.</li>
+        <li>
+          Guiding you through the Navy recruitment process to earn your Navy
+          SEAL contract.
+        </li>
+        <li>Mentoring sessions.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+    <div
+      class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right"
+    >
+      <h2
+        class="text-2xl font-bold text-yellow-600 tracking-widest md:text-3xl font-blackops"
+      >
+        SEAL ETHOS
+      </h2>
+      <ul class="text-left space-y-2 text-xl list-disc list-outside">
+        <li>
+          We will get you out of your comfort zone and test your ability to
+          overcome obstacles both mentally and physically.
+        </li>
+        <li>
+          You will be a stronger and more cohesive team after completing a Getka
+          SEAL Mindset training session
+        </li>
+        <li>
+          Development within your team is crucial for maximizing productivity.
+        </li>
+      </ul>
+      <div class="mt-4 md:mt-8">
+        <Image
+          alt="team statue"
+          src={statue}
+          class="h-full w-3/4 mx-auto sm:w-full object-cover sm:h-[calc(100%_-_3rem)] sm:self-end rounded-2xl"
+        />
+      </div>
+    </div>
+  </div>
+</section>

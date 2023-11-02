@@ -1,0 +1,161 @@
+---
+import { Image } from "astro:assets";
+import boys from "../../assets/two-guys.jpg";
+import girls from "../../assets/two-girls.jpg";
+import google from "../../assets/googlereview.png";
+
+import { YouTube } from "@astro-community/astro-embed-youtube";
+---
+
+<div class="h-fit max-w-5xl mx-auto pt-10">
+  <h2
+    class="text-2xl font-bold text-yellow-600 tracking-widest md:text-3xl font-blackops text-center"
+  >
+    WHAT CUSTOMERS ARE SAYING ABOUT GSM
+  </h2>
+  <div class="flex flex-row justify-between my-10">
+    <div class="w-1/3">
+      <Image
+        alt="girls"
+        src={girls}
+        class="h-full mx-auto sm:w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end rounded-2xl"
+      />
+    </div>
+    <div class="flex flex-col">
+      <YouTube id=" xtTy5nKay_Y" />
+      <div class="flex justify-center">
+        <Image
+          alt="google review"
+          src={google}
+          class="h-auto w-2/3 object-cover rounded-2xl"
+        />
+      </div>
+    </div>
+    <div class="w-1/3">
+      <Image
+        alt="boys"
+        src={boys}
+        class="h-full mx-auto sm:w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end rounded-2xl"
+      />
+    </div>
+  </div>
+  <div
+    class="grid grid-cols-1 place-items-center md:grid-cols-2 gap-4 mx-auto max-w-6xl pb-10 p-4 sm:p-0"
+  >
+    <div
+      style="box-shadow:0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1)"
+      class="flex flex-col max-w-lg align-center mb-10 justify-between border border-solid border-gray-200 dark:border-dark bg-white dark:bg-dark-80 rounded-xl"
+    >
+      <div class="flex flex-col px-6 pt-8 pb-10 space-y-5">
+        <svg
+          width="24"
+          height="18"
+          viewBox="0 0 24 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="text-gray-A400 dark:text-gray-600 fill-current"
+        >
+          <path
+            d="M24 7.3h-5.1L22.3.4H17l-3.4 6.9v10.3H24V7.3zM10.3 17.6V7.3H5L8.6.4H3.4L0 7.3v10.3h10.3z"
+            fill="current"></path>
+        </svg>
+        <p class="text-lg m-0" style="hyphens:auto">
+          If you're looking for an exciting team building exercise that will
+          truly bring your team together, Mike has you covered! As someone who's
+          been to military school, I believe that working towards a common goal
+          while suffering together is what truly makes a team tight-knit. So,
+          when it was time for Yellowbird’s quarterly team building exercise, I
+          wanted to do something more physical than the usual basic activities
+          like cooking classes and other things around town. That's when I had
+          lunch with Mike Getka, a former Navy SEAL, and he offered to lead a
+          mock BUDS training on the beach in Jax Beach. Let me tell you, it was
+          absolutely phenomenal! The best part was coming back to the office and
+          hearing everyone talk about their morning experiences. The feedback
+          was unanimous: this was the best team building event we had ever done!
+          What I appreciated most was how inclusive the training was. Mike did
+          an amazing job accommodating all fitness levels, from those in great
+          shape to those who were less so. Everyone worked together as a team
+          and by the end, we felt like we had truly bonded. In fact, I even have
+          a picture in my office of all of us linked together on the beach. I
+          cannot thank Mike enough for this unforgettable experience, and I'm
+          already looking forward to doing it again soon. It truly made a
+          difference in the way we work together and in how we view each other
+          in the office. So, if you're looking for a team building exercise that
+          will have a lasting impact, give Mike a try!
+        </p>
+      </div>
+      <div
+        class="flex space-x-2 bg-yello-600 dark:bg-dark-70 px-6 pt-6 pb-5 rounded-b-xl"
+      >
+        <div class="flex flex-row justify-between w-full">
+          <div class="flex flex-col justify-center">
+            <p class="text-black m-0 text-lg font-semibold">Pat Flynn</p>
+            <p class="text-black m-0 text-base italic font-semibold mt-1">
+              President, Yellowbird
+            </p>
+          </div>
+          <a
+            href="#"
+            class="inline-block rounded bg-white px-4 hover:text-white py-3 font-bold text-yellow-600 tracking-widest uppercase text-lg transition hover:bg-yellow-600 hover:border-2 border-2 border-transparent hover:border-white focus:outline-none focus:ring focus:ring-yellow-800"
+          >
+            read more
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      style="box-shadow:0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1)"
+      class="flex flex-col max-w-lg align-center mb-10 justify-between border border-solid border-gray-200 dark:border-dark bg-white dark:bg-dark-80 rounded-xl"
+    >
+      <div class="flex flex-col px-6 pt-8 mb-10 space-y-5">
+        <svg
+          width="24"
+          height="18"
+          viewBox="0 0 24 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="text-gray-A400 dark:text-gray-600 fill-current"
+        >
+          <path
+            d="M24 7.3h-5.1L22.3.4H17l-3.4 6.9v10.3H24V7.3zM10.3 17.6V7.3H5L8.6.4H3.4L0 7.3v10.3h10.3z"
+            fill="current"></path>
+        </svg>
+        <p class="text-lg m-0" style="hyphens:auto">
+          If you know Mike Getka then you begin to understand his mindset. I've
+          known Mike for 33 years and I've seen his intensity firsthand. The
+          thing about Mike is that he has an incredible talent to motivate
+          people and he's been doing it his entire life. As a younger SEAL I
+          looked up to Mike because of his intensity and sincere passion for the
+          job. But as Mike has gotten older, Mike has effectively transformed
+          that intensity into a measured understanding of how to inspire
+          leadership and team building. The great thing about the Getka SEAL
+          Mindset is that he still holds that spark that inspires and motivates.
+          And, from all his experience as a Basic Underwater Demolition/SEAL
+          (BUD/S) instructor, he knows how to build leaders to take charge,
+          organize, and work together. I've seen it firsthand, and the mental
+          aspect of the teambuilding might be more important than the physical.
+          Mike is truly a unique personality and skilled leader... Get some
+          GSM!!!
+        </p>
+      </div>
+      <div
+        class="flex space-x-2 bg-yello-600 dark:bg-dark-70 px-6 pt-6 pb-5 rounded-b-xl"
+      >
+        <div class="flex flex-row justify-between w-full">
+          <div class="flex flex-col justify-center">
+            <p class="text-black m-0 text-lg font-semibold">Aric L.</p>
+            <p class="text-black m-0 text-base italic font-semibold mt-1">
+              SEAL Team Two Teammate
+            </p>
+          </div>
+          <a
+            href="#"
+            class="inline-block rounded bg-white px-4 hover:text-white py-3 font-bold text-yellow-600 tracking-widest uppercase text-lg transition hover:bg-yellow-600 hover:border-2 border-2 border-transparent hover:border-white focus:outline-none focus:ring focus:ring-yellow-800"
+          >
+            read more
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
