@@ -1,0 +1,11 @@
+---
+const { image, z } = Astro.props;
+---
+
+<div class="w-screen">
+  <div
+    class={`top-0 left-0 h-full w-full bg-[url('/${image}')] bg-cover bg-top bg-no-repeat bg-fixed z-40 `}
+  >
+    <slot />
+  </div>
+</div>

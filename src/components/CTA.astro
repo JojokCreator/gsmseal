@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import hero from "../assets/hero.png";
+---
+
+<section
+  class="overflow-hidden sm:grid sm:grid-cols-2 sm:items-center max-w-6xl mx-auto my-10"
+>
+  <Image
+    alt="thumbs up"
+    src={hero}
+    class="h-full w-3/4 mx-auto sm:w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end rounded-2xl"
+  />
+  <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+    <div
+      class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right"
+    >
+      <h2 class="text-2xl font-bold text-yellow-600 md:text-3xl font-blackops">
+        WELCOME TO GETKA SEAL MINDSET
+      </h2>
+      <p class="hidden md:mt-4 md:block font-bold text-black text-xl">
+        Interested in Maximizing Team Potential? Pursuing a Navy SEAL Contract?
+      </p>
+
+      <p class="hidden text-black text-xl md:mt-4 md:block">
+        We enhance individual performance and create more effective teams by
+        using the proven training techniques our founder applied during his time
+        as a Navy SEAL instructor.
+      </p>
+      <p class="hidden md:mt-4 md:block font-bold text-black text-xl">
+        “The Mind Drives the Machine!”
+      </p>
+
+      <div class="mt-4 md:mt-8">
+        <a
+          href="#"
+          class="inline-block rounded bg-yellow-600 px-12 py-3 font-bold text-black uppercase text-lg transition hover:bg-yellow-700 focus:outline-none focus:ring focus:ring-yellow-800"
+        >
+          Schedule Training
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

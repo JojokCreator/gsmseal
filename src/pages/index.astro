@@ -1,0 +1,21 @@
+---
+import Hero from "../components/Hero.astro";
+import Layout from "../components/Layout.astro";
+import BackgroundImageWrapper from "../components/BackgroundImageWrapper.astro";
+import CTA from "../components/CTA.astro";
+import Banner from "../components/Banner.astro";
+import BoatText from "../components/BoatText.astro";
+import About from "../components/About.astro";
+import Testimonial from "../components/Testimonial.astro";
+---
+
+<Layout>
+  <Hero />
+  <BackgroundImageWrapper image="eagle.jpg">
+    <CTA />
+    <Banner />
+    <BoatText />
+    <About />
+    <Testimonial />
+  </BackgroundImageWrapper>
+</Layout>

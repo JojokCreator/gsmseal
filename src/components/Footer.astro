@@ -1,0 +1,137 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo-white.png";
+import veteran from "../assets/veteran.png";
+import google from "../assets/google.png";
+---
+
+<div class="w-screen bg-slate-950">
+  <div
+    class="flex flex-col md:flex-row w-full justify-between max-w-7xl mx-auto items-start text-white"
+  >
+    <div class="flex flex-col md:flex-row w-full justify-evenly">
+      <Image src={logo} alt="logo" class="h-20 w-auto mt-8 self-center" />
+      <div
+        class="flex flex-col sm:flex-row justify-center sm:justify-evenly text-center sm:text-start"
+      >
+        <div class="px-8 pt-6 pb-8 mb-4">
+          <p class="font-bold uppercase mb-4">Quick Nav</p>
+          <ul class="text-white space-y-2">
+            <li><a href="link-to-home-page">Home</a></li>
+            <li><a href="link-to-team-building-page">Team Building</a></li>
+            <li>
+              <a href="link-to-buds-preparation-page">BUD/S Preparation</a>
+            </li>
+            <li><a href="link-to-testimonial-page">Testimonial</a></li>
+            <li><a href="link-to-contact-page">Contact</a></li>
+            <li>
+              <a href="link-to-schedule-training-page">Schedule Training</a>
+            </li>
+            <li>
+              <a href="link-to-waiver-release-form">Waiver/Release Form</a>
+            </li>
+          </ul>
+        </div>
+        <div class="px-8 pt-6 pb-8 mb-4">
+          <p class="font-bold uppercase mb-4">Follow Us</p>
+          <ul class="text-white space-y-2">
+            <li><a href="link-to-home-page">Google</a></li>
+            <li><a href="link-to-team-building-page">Facebook</a></li>
+            <li><a href="link-to-buds-preparation-page">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="px-8 pt-6 pb-8 mb-4">
+          <p class="font-bold uppercase mb-4">Connect</p>
+          <ul class="text-white">
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 256 256"
+                ><path
+                  fill="currentColor"
+                  d="M128 16a88.1 88.1 0 0 0-88 88c0 75.3 80 132.17 83.41 134.55a8 8 0 0 0 9.18 0C136 236.17 216 179.3 216 104a88.1 88.1 0 0 0-88-88Zm0 56a32 32 0 1 1-32 32a32 32 0 0 1 32-32Z"
+                ></path></svg
+              >
+              <a href="link-to-home-page">
+                <p>Ponte Vedra Beach Florida 32082</p></a
+              >
+            </li>
+            <li>
+              <a href="link-to-team-building-page"
+                ><Image src={veteran} alt="logo" class="h-16 w-auto mt-8" /></a
+              >
+            </li>
+            <li>
+              <a href="link-to-buds-preparation-page"
+                ><Image src={google} alt="logo" class="h-16 w-auto mt-8" /></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <form class="hidden lg:block shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <p class="font-bold uppercase mb-4">Reach Out</p>
+      <div class="mb-4">
+        <label class="block text-gray-200 text-sm font-bold mb-2" for="name"
+        ></label>
+        <input
+          class="shadow appearance-none border-b bg-slate-900 rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline"
+          id="name"
+          type="text"
+          placeholder="Name*"
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-200 text-sm font-bold mb-2" for="email"
+        ></label>
+        <input
+          class="shadow appearance-none border-b bg-slate-900 rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline"
+          id="email"
+          type="email"
+          placeholder="Email*"
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-200 text-sm font-bold mb-2" for="phone"
+        ></label>
+        <input
+          class="shadow appearance-none border-b bg-slate-900 rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline"
+          id="phone"
+          type="tel"
+          placeholder="Phone*"
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-200 text-sm font-bold mb-2" for="interest"
+        ></label>
+        <select
+          class="block appearance-none w-full bg-slate-900 border-b rounded py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline"
+          id="interest"
+        >
+          <option value="">Select an option</option>
+          <option value="Option 1">Team Building</option>
+          <option value="Option 2">Seal Mentoring</option>
+          <option value="Option 3">Individual Training</option>
+          <option value="Option 3">Other Info</option>
+        </select>
+      </div>
+      <div class="flex items-center justify-between">
+        <button
+          class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded border border-white w-full focus:outline-none focus:shadow-outline"
+          type="button"
+        >
+          SEND
+        </button>
+      </div>
+    </form>
+  </div>
+  <div
+    class="h-10 w-screen bg-black text-white justify-between flex flex-row px-5"
+  >
+    <p>copyright © 2023 Getka SEAL Mindset, LLC</p>
+    <p>Made in 🇺🇸 by 469 Design</p>
+  </div>
+</div>

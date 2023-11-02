@@ -1,0 +1,177 @@
+---
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+import logo from "../assets/logo.png";
+import { Image } from "astro:assets";
+---
+
+<header class="flex gap-5 bg-yellow-600 pb-1">
+  <div class="rip absolute bg-black w-screen p-2">
+    <div
+      class="text-white flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto"
+    >
+      <div class="flex gap-2">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M3.064 7.51A9.996 9.996 0 0 1 12 2c2.695 0 4.959.991 6.69 2.605l-2.867 2.868C14.786 6.482 13.468 5.977 12 5.977c-2.605 0-4.81 1.76-5.595 4.123c-.2.6-.314 1.24-.314 1.9c0 .66.114 1.3.314 1.9c.786 2.364 2.99 4.123 5.595 4.123c1.345 0 2.49-.355 3.386-.955a4.6 4.6 0 0 0 1.996-3.018H12v-3.868h9.418c.118.654.182 1.336.182 2.045c0 3.046-1.09 5.61-2.982 7.35C16.964 21.105 14.7 22 12 22A9.996 9.996 0 0 1 2 12c0-1.614.386-3.14 1.064-4.49Z"
+            ></path></svg
+          >
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"
+            ></path></svg
+          >
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z"
+            ></path></svg
+          >
+        </div>
+        <p class="text-semibold ml-4">904-319-0231</p>
+      </div>
+      <div>
+        <div class="uppercase text-lg font-semibold font-sans">
+          Waiver/Release Form
+        </div>
+      </div>
+    </div>
+  </div>
+  <Astronav>
+    <div
+      class="flex flex-col lg:flex-row w-full justify-between mt-10 max-w-7xl mx-auto items-center relative"
+    >
+      <Image src={logo} alt="logo" class="h-20 w-auto mt-8" />
+      <div class="lg:hidden flex flex-col justify-center">
+        <div class="uppercase text-lg font-semibold text-center">
+          Schedule Training
+        </div>
+        <MenuIcon class="w-8 h-8 text-black z-50 mx-auto" />
+      </div>
+      <MenuItems
+        class="hidden lg:flex bg-white lg:bg-transparent w-screen p-6 lg:static absolute -bottom-48 left-0"
+      >
+        <ul
+          class="flex flex-col lg:flex-row mx-auto lg:gap-5 uppercase text-lg font-semibold text-center"
+        >
+          <li>
+            <a
+              href="#"
+              class="hover:text-white transition duration-300 ease-in-out"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-white transition duration-300 ease-in-out"
+              >Team Building</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-white transition duration-300 ease-in-out"
+              >Bud/s Preperation</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-white transition duration-300 ease-in-out"
+              >Testimonials</a
+            >
+          </li>
+          <li class="hidden lg:block">
+            <a
+              href="#"
+              class="hover:text-white transition duration-300 ease-in-out"
+              >Schedule Training</a
+            >
+          </li>
+          <li class="lg:hidden block">Contact</li>
+        </ul>
+      </MenuItems>
+      <ul
+        class="hidden lg:flex flex-col lg:flex-row lg:gap-5 uppercase text-lg font-semibold mt-3.5"
+      >
+        <li>
+          <a
+            href="#"
+            class="hover:text-white transition duration-300 ease-in-out"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a href="#" class="hover:text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 32 32"
+              ><path
+                fill="currentColor"
+                d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2Zm.16 14a6.981 6.981 0 0 0-5.147 2.256A7.966 7.966 0 0 0 12 20a7.97 7.97 0 0 0 5.167-1.892A6.979 6.979 0 0 0 12.16 16ZM12 4a8 8 0 0 0-6.384 12.821A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634A8 8 0 0 0 12 4Zm0 1a4 4 0 1 1 0 8a4 4 0 0 1 0-8Zm0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z"
+              ></path></svg
+            >
+          </a>
+        </li>
+      </ul>
+    </div>
+  </Astronav>
+
+  <style>
+    .rip {
+      clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        92% 99%,
+        89% 100%,
+        86% 99%,
+        83% 100%,
+        77% 99%,
+        72% 100%,
+        66% 98%,
+        62% 100%,
+        59% 99%,
+        54% 99%,
+        49% 100%,
+        46% 98%,
+        43% 100%,
+        40% 98%,
+        38% 100%,
+        35% 99%,
+        31% 100%,
+        28% 99%,
+        25% 99%,
+        22% 100%,
+        19% 99%,
+        16% 100%,
+        13% 99%,
+        10% 99%,
+        7% 100%,
+        0% 98.5%
+      );
+    }
+  </style>
+</header>
