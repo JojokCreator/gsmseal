@@ -85,8 +85,10 @@ import ScheduleModal from "./ScheduleModal.astro";
       <div class="lg:hidden flex flex-col justify-center">
         <button
           class="uppercase text-lg font-semibold text-center"
-          onclick="window.scheduleModal.showModal();
-          document.body.classList.add('overflow-hidden');"
+          onclick="
+              window.scheduleModal.showModal();
+              document.body.classList.add('overflow-hidden')
+              "
         >
           Schedule Training
         </button>

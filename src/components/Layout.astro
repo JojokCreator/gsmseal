@@ -75,7 +75,7 @@ if (path === "/") {
   </body><script>
     const modals = document.querySelectorAll("dialog");
     modals.forEach((modal) => {
-      modal.addEventListener("close", function (event) {
+      modal.addEventListener("close", function () {
         document.body.classList.remove("overflow-hidden");
       });
     });
