@@ -6,36 +6,63 @@ import { SEO } from "astro-seo";
 import "@fontsource/black-ops-one";
 import "@fontsource-variable/source-sans-3";
 import "@fontsource/source-sans-pro";
+
+const { titleProp } = Astro.props;
+
+let path = Astro.url.pathname;
+
+let title = "";
+if (path === "/") {
+  title = "Home - Getka SEAL Mindset";
+} else {
+  title = titleProp
+    ? titleProp + " - " + "Getka SEAL Mindset".trim()
+    : path
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join("-")
+        .split("/")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .filter((p) => p !== "")
+        .join(" - ")
+        .replaceAll("-", " ") +
+      " - " +
+      "Getka SEAL Mindset".trim();
+}
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <SEO
-      title="Green Thumb Landscapers - Highest value service by doing it the right way the first time. Delivering premium quality work and serving our community is our first and foremost goal."
-      description="Highest value service by doing it the right way the first time. Delivering premium quality work and serving our community is our first and foremost goal."
+      title={title}
+      description="Getka SEAL Mindset - Train With A Navy SEAL To Unlock Your Full Potential. Welcome ToGetka SEAL Mindset Interested in Maximizing Team Potential? Pursuing a Navy SEAL Contract? We enhance individual performance and create more effective teams by using the proven training techniques our founder applied during his time as a Navy SEAL instructor"
       openGraph={{
         basic: {
           title:
-            "Green Thumb Landscapers - Highest value service by doing it the right way the first time. Delivering premium quality work and serving our community is our first and foremost goal.",
+            "Getka SEAL Mindset - Train With A Navy SEAL To Unlock Your Full Potential.",
           type: "website",
-          image: "/facebook.jpg",
+          image: "/beach.jpg",
         },
         optional: {
           description:
-            "Green Thumb Landscapers - Highest value service by doing it the right way the first time. Delivering premium quality work and serving our community is our first and foremost goal.",
+            "Getka SEAL Mindset - Train With A Navy SEAL To Unlock Your Full Potential.",
         },
       }}
       extend={{
         meta: [
           {
             name: "twitter:image",
-            content: "/twitter.jpg",
+            content: "/beach.jpg",
           },
-          { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
+          {
+            name: "twitter:title",
+            content:
+              "Getka SEAL Mindset - Train With A Navy SEAL To Unlock Your Full Potential.",
+          },
           { name: "twitter:description", content: "Agent" },
         ],
       }}
@@ -45,5 +72,12 @@ import "@fontsource/source-sans-pro";
     <Navbar />
     <slot />
     <Footer />
-  </body>
+  </body><script>
+    const modals = document.querySelectorAll("dialog");
+    modals.forEach((modal) => {
+      modal.addEventListener("close", function (event) {
+        document.body.classList.remove("overflow-hidden");
+      });
+    });
+  </script>
 </html>

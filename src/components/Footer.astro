@@ -3,6 +3,8 @@ import { Image } from "astro:assets";
 import logo from "../assets/logo-white.png";
 import veteran from "../assets/veteran.png";
 import google from "../assets/google.png";
+import ScheduleModal from "./ScheduleModal.astro";
+import WaiverModal from "./WaiverModal.astro";
 ---
 
 <div class="w-screen bg-slate-950">
@@ -50,15 +52,19 @@ import google from "../assets/google.png";
               >
             </li>
             <li>
-              <a
+              <button
                 class="hover:text-yellow-600 transition ease-in-out duration-300"
-                href="training">Schedule Training</a
+                onclick="window.scheduleModalFooter.showModal();
+                document.body.classList.add('overflow-hidden')"
+                >Schedule Training</button
               >
             </li>
             <li>
-              <a
+              <button
                 class="hover:text-yellow-600 transition ease-in-out duration-300"
-                href="">Waiver/Release Form</a
+                onclick="window.waiverModalFooter.showModal();
+                    document.body.classList.add('overflow-hidden')"
+                >Waiver/Release Form</button
               >
             </li>
           </ul>
@@ -93,7 +99,7 @@ import google from "../assets/google.png";
         <div class="px-8 pt-6 pb-8 mb-4">
           <p class="font-bold uppercase mb-4">Connect</p>
           <ul class="text-white">
-            <li class="flex items-center">
+            <li class="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -111,17 +117,25 @@ import google from "../assets/google.png";
               >
             </li>
             <li>
-              <a
+              <div
                 class="hover:text-yellow-600 transition ease-in-out duration-300"
-                href="link-to-team-building-page"
-                ><Image src={veteran} alt="logo" class="h-16 w-auto mt-8" /></a
               >
+                <Image
+                  src={veteran}
+                  alt="logo"
+                  class="h-16 w-auto mt-8 mx-auto md:mx-0"
+                />
+              </div>
             </li>
             <li>
               <a
                 class="hover:text-yellow-600 transition ease-in-out duration-300"
-                href="link-to-buds-preparation-page"
-                ><Image src={google} alt="logo" class="h-16 w-auto mt-8" /></a
+                href="https://g.page/r/CZLv7_FshwzaEBM/review"
+                ><Image
+                  src={google}
+                  alt="logo"
+                  class="h-16 w-auto mt-8 mx-auto md:mx-0"
+                /></a
               >
             </li>
           </ul>
@@ -191,3 +205,6 @@ import google from "../assets/google.png";
     <p>Made in 🇺🇸 by 469 Design</p>
   </div>
 </div>
+
+<ScheduleModal id="scheduleModalFooter" />
+<WaiverModal id="waiverModalFooter" />

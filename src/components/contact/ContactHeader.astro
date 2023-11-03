@@ -3,14 +3,10 @@ import { Image } from "astro:assets";
 import hero from "../../assets/beach-waves.jpg";
 ---
 
-<div class="w-screen h-fit relative">
-  <Image
-    src={hero}
-    alt="running on beach"
-    class="object-cover absolute -z-10"
-  />
+<div class="relative">
+  <Image src={hero} alt="running on beach" class="object-cover" />
   <div
-    class="[text-shadow:10px_4px_8px_rgba(0,0,0)] max-w-5xl tracking-wide mx-auto font-blackops text-yellow-500 font-bold text-4xl sm:text-6xl text-center h-[30vh] md:h-[50vh] lg:h-[80vh] pt-10 lg:pt-20"
+    class="absolute top-0 left-1/2 -translate-x-1/2 z-10 [text-shadow:0px_0px_18px_rgba(0,0,0)] max-w-5xl tracking-wide mx-auto font-blackops text-yellow-500 font-bold text-4xl sm:text-6xl text-center pt-10 lg:pt-20"
   >
     Contact
 

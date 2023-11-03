@@ -41,12 +41,13 @@ import boat from "../assets/boat.jpg";
       </ul>
 
       <div class="mt-4 md:mt-8 flex justify-center">
-        <a
-          href="#"
+        <button
+          onclick="window.scheduleModal.showModal();
+        document.body.classList.add('overflow-hidden')"
           class="inline-block rounded bg-yellow-600 px-12 py-3 font-bold text-black uppercase text-lg transition hover:bg-yellow-700 focus:outline-none focus:ring focus:ring-yellow-800"
         >
           Schedule Training
-        </a>
+        </button>
       </div>
     </div>
   </div>

@@ -4,11 +4,83 @@ import statue from "../../assets/statue.jpg";
 ---
 
 <section
-  class="overflow-hidden sm:grid sm:grid-cols-2 sm:items-center max-w-6xl mx-auto my-10"
+  class="sm:grid gap-3 sm:grid-cols-2 sm:items-start max-w-6xl mx-auto py-10"
 >
-  <div class="p-8 md:p-12 lg:px-16 lg:py-24">
-    <!-- component -->
-    <form class="w-full max-w-lg bg-white p-10">
+  <div
+    class="rounded-xl bg-white shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] ring ring-yellow-50 p-2 lg:p-4 m-8"
+  >
+    <div class="flex items-start sm:gap-8">
+      <div
+        class="hidden sm:grid sm:h-12 sm:w-12 sm:shrink-0 sm:place-content-center sm:rounded-full sm:border-2 sm:bg-yellow-600 my-auto"
+        aria-hidden="true"
+      >
+        <div class="flex items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            ><g fill="white"
+              ><path
+                d="M22 12A10.002 10.002 0 0 0 12 2v2a8.003 8.003 0 0 1 7.391 4.938A8 8 0 0 1 20 12h2ZM2 10V5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H6a8 8 0 0 0 8 8v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5C7.373 22 2 16.627 2 10Z"
+              ></path><path
+                d="M17.543 9.704A5.99 5.99 0 0 1 18 12h-1.8A4.199 4.199 0 0 0 12 7.8V6a6 6 0 0 1 5.543 3.704Z"
+              ></path></g
+            ></svg
+          >
+        </div>
+      </div>
+      <div>
+        <h3 class="mt-4 text-lg font-medium sm:text-xl">
+          <a
+            href="tel:904-319-0231"
+            class="text-yellow-600 font-bold text-3xl lg:text-5xl"
+          >
+            Call Us</a
+          >
+        </h3>
+        <p class="mt-1 text-black text-xl">904-319-0231</p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="rounded-xl bg-white shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] ring ring-yellow-50 p-2 lg:p-4 m-8"
+  >
+    <div class="flex items-start sm:gap-8">
+      <div
+        class="hidden sm:grid sm:h-12 sm:w-12 sm:shrink-0 sm:place-content-center sm:rounded-full sm:border-2 sm:bg-yellow-600 my-auto"
+        aria-hidden="true"
+      >
+        <div class="flex items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            ><path
+              fill="white"
+              d="M19 9A7 7 0 1 0 5 9c0 1.387.409 2.677 1.105 3.765h-.008L12 22l5.903-9.235h-.007A6.971 6.971 0 0 0 19 9zm-7 3a3 3 0 1 1 0-6a3 3 0 0 1 0 6z"
+            ></path></svg
+          >
+        </div>
+      </div>
+      <div>
+        <h3 class="mt-4 text-lg font-medium sm:text-xl">
+          <a
+            href="tel:904-319-0231"
+            class="text-yellow-600 font-bold text-3xl lg:text-5xl"
+          >
+            Location</a
+          >
+        </h3>
+        <p class="mt-1 text-black text-xl">Ponte Vedra Beach, Florida 32082</p>
+      </div>
+    </div>
+  </div>
+  <div class="p-8 md:p-12 lg:px-16 lg:py-24 z-50">
+    <form
+      class="w-full max-w-3xl bg-white p-10 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"
+    >
       <h2
         class="text-2xl font-bold text-center text-yellow-600 tracking-widest md:text-3xl font-blackops"
       >
@@ -137,9 +209,11 @@ import statue from "../../assets/statue.jpg";
       </div>
     </form>
   </div>
-  <Image
-    alt="thumbs up"
-    src={statue}
-    class="h-3/4 w-full mx-auto object-cover sm:h-[calc(100%_-_2rem)] sm:self-end rounded-2xl pb-10"
-  />
+  <div class="flex flex-col my-auto -ml-20">
+    <Image
+      alt="thumbs up"
+      src={statue}
+      class="h-3/4 w-full mx-auto object-cover sm:h-[calc(100%_-_2rem)] sm:self-end rounded-2xl z-0 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"
+    />
+  </div>
 </section>

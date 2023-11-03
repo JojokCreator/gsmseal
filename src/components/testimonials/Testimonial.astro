@@ -5,6 +5,57 @@ import girls from "../../assets/two-girls.jpg";
 import google from "../../assets/googlereview.png";
 
 import { YouTube } from "@astro-community/astro-embed-youtube";
+
+const reviews = [
+  {
+    customer: "Nick T.",
+    customerType: "Varsity Lacrosse Player",
+    review:
+      "Mike was the head instructor of the workout for my lacrosse team and I couldn't have asked for a better leader. Mike has the ability to make you and those around you feel like you are capable of doing anything, and he builds upon that by giving you exercises and activities that push you beyond what do you think you are capable of. The trait I most admire about Mike is that he never instructs you to do something he wouldn't do himself, I think this is the ultimate determiner of a great leader.",
+  },
+  {
+    customer: "Tom McCrudden",
+    customerType: "President, Great Florida Shellfish Company",
+    review:
+      "I was recently tasked with setting up and coordinating a team building event for my son’s lacrosse team. This is an annual event, and our usual location was unavailable, so we had to come up with a new site with little time to plan. We found a site to challenge the boys but needed someone to lead and teach them about teamwork. Mike was referred to me by one of the other parents who knew of him and his reputation as a leader. To say Mike’s leadership during this event was a success is an understatement. Mike helped to tie the whole day together and kept the boys engaged without them losing focus. He wanted to get as much information about the team and their history so he could develop a training strategy. The day went off without a hitch and everyone involved was very grateful for Mike’s involvement. I would highly recommend Mike Getka for his leadership and team building skills as I plan to use him for my company’s events in the future.",
+  },
+  {
+    customer: "Chris & Heather George",
+    customerType: "Happy Parents",
+    review:
+      "If you are looking for an excellent team building experience from an actual SEAL Team instructor, Mike and GSM is your outfit. My kids baseball team did his course a couple of years ago and still mention it to new team members all the time. For us, it was a step off the field to tackle obstacles outside of baseball and a huge step in solidifying the team aspect. I would highly recommend this course to anyone.",
+  },
+  {
+    customer: "Glen",
+    customerType: "Happy Customers",
+    review:
+      "5 stars isn’t enough to give Chief Getka justice for the time we had in the beach. The experience was absolutely life changing. The time spent with Getka and his fellow Frogman Arik, brought the team and the coaching staff together. Doing the O-Course after Beach PT brought me back to the Crucible in Parris Island. The Beach PT was dynamic, purposeful, and my favorite. Mike truly has a way to inspire. He’s a motivational force that inspired a domino effect through the team. A Defenseman made a complete 180 turn in mindset, 20+ young men commit to something bigger than themselves, an entire attitude and culture was thrown away and reborn. All due to Mike Getka. I know my Men’s Lacrosse Team enjoyed the time with the SEALS. We can’t wait to come back!",
+  },
+  {
+    customer: "Nik Thompson",
+    customerType: "Happy Customers",
+    review:
+      "Mike was the head instructor of the workout for my lacrosse team and I couldn't have asked for a better leader. Mike has the ability to make you and those around you feel like you are capable of getting through any obstacle you are facing, and he builds upon that by giving you exercises and activities that push you beyond what do you think you are capable of. The trait I most admire about Mike is that he never instructs you to do something he wouldn't do himself. I cannot give enough praise to Mike and his company. Mike truly has a way to inspire. He’s a motivational force that inspired a domino effect through the team. A Defenseman made a complete 180 turn in mindset, 20+ young men commit to something bigger than themselves, an entire attitude and culture was thrown away and reborn. All due to Mike Getka. I know my Men’s Lacrosse Team enjoyed the time with the SEALS. We can’t wait to come back!",
+  },
+  {
+    customer: "Ari Curtis",
+    customerType: "Happy Customers",
+    review:
+      "Mike's SEAL training is amazing! My daughter's softball team took part in Mike's program and they had a blast. The girls put in lots of hard work and determination, and they came out performing like a team. I highly recommend Getka SEAL Mindset for any athletes - team or individual competitors. Mike truly has a way to inspire. He’s a motivational force that inspired a domino effect through the team. A Defenseman made a complete 180 turn in mindset, 20+ young men commit to something bigger than themselves, an entire attitude and culture was thrown away and reborn. All due to Mike Getka. I know my Men’s Lacrosse Team enjoyed the time with the SEALS. We can’t wait to come back!",
+  },
+  {
+    customer: "5 Tool Training",
+    customerType: "Happy Customers",
+    review:
+      "We had a great experience with Chief Getka and his staff! We had players that were 8-12 years old and he worked to adjust his training to their ability level. He pushed them past where any of us thought they could go but not to their breaking point. I have already had parents ask me when we are doing it again! I know my Men’s Lacrosse Team enjoyed the time with the SEALS. We can’t wait to come back!",
+  },
+  {
+    customer: "Jonathan Scott",
+    customerType: "Happy Customers",
+    review:
+      "I've coached for 30 years and have worked with SEALs in the past. In late 2019, I took the helm of a HS lacrosse program that needed ’a boost’. I had been trying to get Mike involved in training our guys for several years but Covid got in the way and postponed our Florida training camps until 2023. It was well worth the wait. Mike and his associate were with us for a few days and, on the very first night, they started to make an impact. That was before we even 'hit the surf'. The program that Mike put together for our team was specifically tailored to our needs and I can tell you that we left with a greater sense of togetherness, a better concept of how to overcome obstacles, and a true understanding of 'leadership on all levels'. In three days, Mike changed lives and became a part of our team. With an expanded interaction planned for 2024's training camp, the boys both fear and cannot wait to reconnect with the instructors at GSM in the spring. Pushing outside of one's comfort zone can be scary but the changes in attitude that come from doing so lead to a change in altitude that is hard to match. I highly recommend Getka SEAL Mindset for any organization. I know my Men’s Lacrosse Team enjoyed the time with the SEALS. We can’t wait to come back!",
+  },
+];
 ---
 
 <div class="h-fit max-w-5xl mx-auto pt-10">
@@ -13,38 +64,45 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
   >
     WHAT CUSTOMERS ARE SAYING ABOUT GSM
   </h2>
-  <div class="flex flex-row justify-between my-10">
-    <div class="w-1/3">
+  <div
+    class="flex flex-col md:flex-row items-center gap-6 justify-between my-10"
+  >
+    <div class="w-1/2 md:w-1/3">
       <Image
         alt="girls"
         src={girls}
-        class="h-full mx-auto sm:w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end rounded-2xl"
+        class="h-full mx-auto sm:w-full object-cover sm:h-[calc(300px_-_2rem)] sm:self-end rounded-2xl"
       />
     </div>
-    <div class="flex flex-col">
-      <YouTube id=" xtTy5nKay_Y" />
-      <div class="flex justify-center">
-        <Image
-          alt="google review"
-          src={google}
-          class="h-auto w-2/3 object-cover rounded-2xl"
-        />
+    <div
+      class="flex-col gap-4 flex items-center justify-center w-[70vw] md:w-1/3"
+    >
+      <!-- <YouTube id=" xtTy5nKay_Y" /> -->
+      <video controls><source src="/review.mp4" type="video/mp4" /></video>
+      <div class="flex justify-center w-full md:w-1/2">
+        <a href="https://g.page/r/CZLv7_FshwzaEBM/review">
+          <Image
+            alt="google review"
+            src={google}
+            class="object-cover rounded-2xl"
+          />
+        </a>
       </div>
     </div>
-    <div class="w-1/3">
+    <div class="w-1/2 md:w-1/3">
       <Image
         alt="boys"
         src={boys}
-        class="h-full mx-auto sm:w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end rounded-2xl"
+        class="h-full mx-auto sm:w-full object-cover sm:h-[calc(300px_-_2rem)] sm:self-end rounded-2xl"
       />
     </div>
   </div>
   <div
-    class="grid grid-cols-1 place-items-center md:grid-cols-2 gap-4 mx-auto max-w-6xl pb-10 p-4 sm:p-0"
+    class="grid grid-cols-1 place-items-center md:place-items-start lg:grid-cols-2 gap-4 mx-auto max-w-6xl pb-10 sm:p-2"
   >
     <div
       style="box-shadow:0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1)"
-      class="flex flex-col max-w-lg align-center mb-10 justify-between border border-solid border-gray-200 dark:border-dark bg-white dark:bg-dark-80 rounded-xl"
+      class="w-[90vw] md:w-auto flex flex-col md:max-w-lg align-center mb-10 justify-between border border-solid border-gray-200 bg-white rounded-xl"
     >
       <div class="flex flex-col px-6 pt-8 pb-10 space-y-5">
         <svg
@@ -94,68 +152,150 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
               President, Yellowbird
             </p>
           </div>
-          <a
-            href="#"
-            class="inline-block rounded bg-white px-4 hover:text-white py-3 font-bold text-yellow-600 tracking-widest uppercase text-lg transition hover:bg-yellow-600 hover:border-2 border-2 border-transparent hover:border-white focus:outline-none focus:ring focus:ring-yellow-800"
-          >
-            read more
-          </a>
         </div>
       </div>
     </div>
-    <div
-      style="box-shadow:0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1)"
-      class="flex flex-col max-w-lg align-center mb-10 justify-between border border-solid border-gray-200 dark:border-dark bg-white dark:bg-dark-80 rounded-xl"
-    >
-      <div class="flex flex-col px-6 pt-8 mb-10 space-y-5">
-        <svg
-          width="24"
-          height="18"
-          viewBox="0 0 24 18"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="text-gray-A400 dark:text-gray-600 fill-current"
+    <div>
+      <div
+        style="box-shadow:0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1)"
+        class="w-[90vw] md:w-auto flex flex-col md:max-w-lg align-center mb-10 justify-between border border-solid border-gray-200 bg-white rounded-xl"
+      >
+        <div class="flex flex-col px-6 pt-8 pb-10 space-y-5">
+          <svg
+            width="24"
+            height="18"
+            viewBox="0 0 24 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="text-gray-A400 dark:text-gray-600 fill-current"
+          >
+            <path
+              d="M24 7.3h-5.1L22.3.4H17l-3.4 6.9v10.3H24V7.3zM10.3 17.6V7.3H5L8.6.4H3.4L0 7.3v10.3h10.3z"
+              fill="current"></path>
+          </svg>
+          <p class="text-lg m-0" style="hyphens:auto">
+            If you know Mike Getka then you begin to understand his mindset.
+            I've known Mike for 33 years and I've seen his intensity firsthand.
+            The thing about Mike is that he has an incredible talent to motivate
+            people and he's been doing it his entire life. As a younger SEAL I
+            looked up to Mike because of his intensity and sincere passion for
+            the job. But as Mike has gotten older, Mike has effectively
+            transformed that intensity into a measured understanding of how to
+            inspire leadership and team building. The great thing about the
+            Getka SEAL Mindset is that he still holds that spark that inspires
+            and motivates. And, from all his experience as a Basic Underwater
+            Demolition/SEAL (BUD/S) instructor, he knows how to build leaders to
+            take charge, organize, and work together. I've seen it firsthand,
+            and the mental aspect of the teambuilding might be more important
+            than the physical. Mike is truly a unique personality and skilled
+            leader... Get some GSM!!!
+          </p>
+        </div>
+        <div
+          class="flex space-x-2 bg-yello-600 dark:bg-dark-70 px-6 pt-6 pb-5 rounded-b-xl"
         >
-          <path
-            d="M24 7.3h-5.1L22.3.4H17l-3.4 6.9v10.3H24V7.3zM10.3 17.6V7.3H5L8.6.4H3.4L0 7.3v10.3h10.3z"
-            fill="current"></path>
-        </svg>
-        <p class="text-lg m-0" style="hyphens:auto">
-          If you know Mike Getka then you begin to understand his mindset. I've
-          known Mike for 33 years and I've seen his intensity firsthand. The
-          thing about Mike is that he has an incredible talent to motivate
-          people and he's been doing it his entire life. As a younger SEAL I
-          looked up to Mike because of his intensity and sincere passion for the
-          job. But as Mike has gotten older, Mike has effectively transformed
-          that intensity into a measured understanding of how to inspire
-          leadership and team building. The great thing about the Getka SEAL
-          Mindset is that he still holds that spark that inspires and motivates.
-          And, from all his experience as a Basic Underwater Demolition/SEAL
-          (BUD/S) instructor, he knows how to build leaders to take charge,
-          organize, and work together. I've seen it firsthand, and the mental
-          aspect of the teambuilding might be more important than the physical.
-          Mike is truly a unique personality and skilled leader... Get some
-          GSM!!!
-        </p>
+          <div class="flex flex-row justify-between w-full">
+            <div class="flex flex-col justify-center">
+              <p class="text-black m-0 text-lg font-semibold">Aric L.</p>
+              <p class="text-black m-0 text-base italic font-semibold mt-1">
+                SEAL Team Two Teammate
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div
-        class="flex space-x-2 bg-yello-600 dark:bg-dark-70 px-6 pt-6 pb-5 rounded-b-xl"
+        id="slider"
+        class="overflow-hidden h-full w-[90vw] md:w-[500px] relative"
       >
-        <div class="flex flex-row justify-between w-full">
-          <div class="flex flex-col justify-center">
-            <p class="text-black m-0 text-lg font-semibold">Aric L.</p>
-            <p class="text-black m-0 text-base italic font-semibold mt-1">
-              SEAL Team Two Teammate
-            </p>
-          </div>
-          <a
-            href="#"
-            class="inline-block rounded bg-white px-4 hover:text-white py-3 font-bold text-yellow-600 tracking-widest uppercase text-lg transition hover:bg-yellow-600 hover:border-2 border-2 border-transparent hover:border-white focus:outline-none focus:ring focus:ring-yellow-800"
-          >
-            read more
-          </a>
-        </div>
+        <ul
+          id="slideWrap"
+          class="w-[10000%] relative h-full p-0 m-0 left-0 transition-all duration-700 ease-in-out"
+        >
+          {
+            reviews.map((review) => (
+              <li class="relative h-full float-left">
+                <div class="h-full w-[90vw] md:w-[500px] flex flex-col md:max-w-lg align-center mb-10 justify-between border border-solid border-gray-200 bg-white rounded-xl">
+                  <div class="flex flex-col px-6 pt-8 pb-10 space-y-5">
+                    <svg
+                      width="24"
+                      height="18"
+                      viewBox="0 0 24 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="text-gray-A400 dark:text-gray-600 fill-current"
+                    >
+                      <path
+                        d="M24 7.3h-5.1L22.3.4H17l-3.4 6.9v10.3H24V7.3zM10.3 17.6V7.3H5L8.6.4H3.4L0 7.3v10.3h10.3z"
+                        fill="current"
+                      />
+                    </svg>
+                    <p class="text-lg m-0" style="hyphens:auto">
+                      {review.review}
+                    </p>
+                  </div>
+                  <div class="flex space-x-2 bg-yello-600 dark:bg-dark-70 px-6 pt-6 pb-5 rounded-b-xl">
+                    <div class="flex flex-row justify-between w-full">
+                      <div class="flex flex-col justify-center">
+                        <p class="text-black m-0 text-lg font-semibold">
+                          {review.customer}
+                        </p>
+                        <p class="text-black m-0 text-base italic font-semibold mt-1">
+                          {review.customerType}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
   </div>
+
+  <script>
+    var responsiveSlider = function () {
+      var slider = document.getElementById("slider");
+      var sliderWidth = slider!.offsetWidth;
+      var slideList = document.getElementById("slideWrap");
+      var count = 1;
+      var items = slideList!.querySelectorAll("li").length;
+
+      window.addEventListener("resize", function () {
+        sliderWidth = slider!.offsetWidth;
+      });
+
+      var prevSlide = function () {
+        if (count > 1) {
+          count = count - 2;
+          slideList!.style.left = "-" + count * sliderWidth + "px";
+          count++;
+        } else if ((count = 1)) {
+          count = items - 1;
+          slideList!.style.left = "-" + count * sliderWidth + "px";
+          count++;
+        }
+      };
+
+      var nextSlide = function () {
+        if (count < items) {
+          slideList!.style.left = "-" + count * sliderWidth + "px";
+          count++;
+        } else if ((count = items)) {
+          slideList!.style.left = "0px";
+          count = 1;
+        }
+      };
+
+      setInterval(function () {
+        nextSlide();
+      }, 5000);
+    };
+
+    window.addEventListener("DOMContentLoaded", function () {
+      responsiveSlider();
+    });
+  </script>
 </div>

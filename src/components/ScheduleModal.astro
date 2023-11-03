@@ -1,0 +1,80 @@
+---
+const { id } = Astro.props;
+---
+
+<dialog id={id} class="backdrop:bg-neutral-800/90 text-black">
+  <form method="dialog" class="mx-auto bg-white relative w-[90vw] max-w-2xl">
+    <button class="p-4 absolute right-0 top-0">
+      <svg
+        fill="black"
+        stroke="black"
+        width="20"
+        height="20"
+        data-loading="lazy"
+        class="search-menu-exit mt-2"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 20 20"
+        data-id="svg-loader_28"
+      >
+        <path d="M2,2 L18,18" stroke-width="3"></path>
+        <path d="M10,10 L10,10" stroke-width="3"></path>
+        <path d="M2,18 L18,2" stroke-width="3"></path>
+      </svg>
+    </button>
+  </form>
+  <form class="space-y-4 p-4 my-4 flex flex-col justify-center">
+    <p class="font-bold mb-2">Schedule</p>
+    <div>
+      <label for={id + "-subject"} class="text-gray-700 font-medium"
+        >Subject</label
+      >
+      <select
+        autocomplete="off"
+        id={id + "-subject"}
+        name="subject"
+        class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-black focus:border-2"
+      >
+        <option value="" disabled selected>Select a topic</option>
+        <option value="General Inquiry">Speaking Engagement</option>
+        <option value="Support Request">Press Enquiry</option>
+        <option value="Feedback"
+          >Collaboration< /option>
+          <option value="Feedback">Question</option>
+          <option value="Other">Other</option>
+        </option>
+      </select>
+    </div>
+    <div>
+      <label for={id + "-message"} class="text-gray-700 font-medium"
+        >Message</label
+      >
+      <textarea
+        autocomplete="off"
+        id={id + "-message"}
+        name="message"
+        class="w-full h-32 mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-black focus:border-2"
+        placeholder="Your message"
+        required></textarea>
+    </div>
+    <div>
+      <label for={id + "-email"} class="text-gray-700 font-medium"
+        >Email address</label
+      >
+      <input
+        autocomplete="email"
+        id={id + "-email"}
+        name="email"
+        class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-black focus:border-2"
+        placeholder="Please fill in your email so I can contact you."
+        required
+      />
+    </div>
+    <button
+      type="submit"
+      class="w-32 mx-auto bg-sky-500 text-white font-semibold p-3 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out"
+      >Send</button
+    >
+  </form>
+</dialog>

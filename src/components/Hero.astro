@@ -9,9 +9,24 @@
     >
     </video>
     <div
-      class="[text-shadow:10px_4px_8px_rgba(0,0,0)] mt-28 sm:mt-72 max-w-5xl mx-auto h-fit font-blackops text-white font-bold text-4xl sm:text-6xl text-center"
+      class="[text-shadow:0px_0px_18px_rgba(0,0,0)] mt-28 sm:mt-72 max-w-5xl mx-auto h-fit font-blackops text-white font-bold text-4xl sm:text-6xl text-center slide-in"
     >
       Train With A Navy SEAL To Unlock Your Full Potential
     </div>
   </div>
 </div>
+
+<style>
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .slide-in {
+    animation: slideIn 1s ease;
+  }
+</style>
