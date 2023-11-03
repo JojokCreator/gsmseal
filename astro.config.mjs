@@ -6,6 +6,9 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
+  server: {
+    host: true,
+  },
   site: "https://gsmseal.com",
-  integrations: [tailwind(), sitemap(), robotsTxt()]
+  integrations: [tailwind(), sitemap(), robotsTxt()],
 });

@@ -80,13 +80,13 @@ import ScheduleModal from "./ScheduleModal.astro";
       class="flex flex-col lg:flex-row w-full justify-between mt-10 max-w-7xl mx-auto items-center relative"
     >
       <a href="/">
-        <Image src={logo} alt="logo" class="w-96 mt-4" />
+        <Image src={logo} alt="logo" class="w-44 md:w-96 pt-8 md:pt-0" />
       </a>
       <div class="lg:hidden flex flex-col justify-center">
         <button
           class="uppercase text-lg font-semibold text-center"
           onclick="window.scheduleModal.showModal();
-          document.body.classList.add('overflow-hidden')"
+          document.body.classList.add('overflow-hidden');"
         >
           Schedule Training
         </button>
@@ -129,12 +129,14 @@ import ScheduleModal from "./ScheduleModal.astro";
           <li class="hidden lg:block">
             <button
               onclick="window.scheduleModal.showModal();
-            document.body.classList.add('overflow-hidden')"
+            document.body.classList.add('overflow-hidden');"
               class="hover:text-white transition duration-300 ease-in-out uppercase"
               >Schedule Training</button
             >
           </li>
-          <li class="lg:hidden block">Contact</li>
+          <a href="/contact">
+            <li class="lg:hidden block">Contact</li>
+          </a>
         </ul>
       </MenuItems>
       <ul
